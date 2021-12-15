@@ -1,0 +1,10 @@
+.loginBoxWrap{border: 1px solid black; margin: 5% 30% 0 30%; text-align: center; height: 500px;}
+.inputLogin{margin:3% 0 3%; width: 70%; height: 50px;}
+.inputSubmit{margin:3% 0 3%; width: 70%; height: 50px; background-color: black; color: white; font-size: 17px;}
+.inputCheck{margin-left: 55%;}
+.loginMenu {text-align:center; margin:36px 0;}
+.loginMenu li {display:inline-block;height:14px; line-height:14px; margin:4px 0 3px 0;}
+.loginMenu li.idsearch {border-left:1px solid #d8d8d8; border-right:1px solid #d8d8d8; padding:0 17.5px 0 19.5px; margin:4px 18.5px 3px 25.5px;}
+.loginMenu li a {font-size:14px; color:#aaa;}
+.loginMenu li::before{content: "|"; font-size:14px; color:#aaa;}
+.loginMenu li:first-child::before{content: none;}
