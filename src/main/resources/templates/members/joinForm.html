@@ -21,7 +21,7 @@
                     <span class="passwd">비밀번호<input type="password" name="pw" value="" class="inputJoin" placeholder="비밀번호를 입력해주세요"></span>
                     <span class="passwdCheck"><input type="password" name="pw" value="" class="inputJoin" placeholder="비밀번호 확인해주세요"></span>
                     <span class="userName">이름<input type="text" name="userName" value="" class="inputJoin" placeholder="이름을 입력해주세요"></span>
-                    <span class="PhoneNumber">전화번호<input type="tel" id="tel" name="tel"class="inputJoin"  maxlength="11" size="20" pattern=”[0-9]{11}” title="하이픈(-)은 입력할 수 없습니다." placeholder="입력 예) 01042542375"></span>
+                    <span class="PhoneNumber">핸드폰 번호<input type="tel" id="tel" onkeyup="inputPhoneNumber(this)" name="tel"class="inputJoin"  maxlength="13" title="전화번호가 올바르지 않습니다." placeholder="입력 예) 010-XXXX-XXXX"></span>
               		<span class="email">이메일<input type="email" id="email" name="email"class="inputJoin" size="30" required placeholder="입력 예) seulbinim@gmail.com"></span>
                     <span class="submitJoin"><input type="submit" class="inputSubmit" value="회원가입"/></span>
                    
