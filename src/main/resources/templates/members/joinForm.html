@@ -16,13 +16,13 @@
                 <img src="/images/loginLogo.jpg" class="logo" alt="Hi-End Logo" title="Hi-End Logo">
             </div>
             <div class="joinBox">
-                <form name="joinform" method="POST">
-                    <span class="id">아이디<input type="text" name="id" value="" class="inputJoin" placeholder="아이디를 입력해주세요"/></span>
-                    <span class="passwd">비밀번호<input type="password" name="pw" value="" class="inputJoin" placeholder="비밀번호를 입력해주세요"></span>
-                    <span class="passwdCheck"><input type="password" name="pw" value="" class="inputJoin" placeholder="비밀번호 확인해주세요"></span>
-                    <span class="userName">이름<input type="text" name="userName" value="" class="inputJoin" placeholder="이름을 입력해주세요"></span>
-                    <span class="PhoneNumber">핸드폰 번호<input type="tel" id="tel" onkeyup="inputPhoneNumber(this)" name="tel"class="inputJoin"  maxlength="13" title="전화번호가 올바르지 않습니다." placeholder="입력 예) 010-XXXX-XXXX"></span>
-              		<span class="email">이메일<input type="email" id="email" name="email"class="inputJoin" size="30" required placeholder="입력 예) seulbinim@gmail.com"></span>
+                <form name="joinform" method="POST" th:action th:object="${member}">
+                    <span class="id">아이디<input type="text" class="inputJoin" th:field="*{loginId}" placeholder="아이디를 입력해주세요"/></span>
+                    <span class="passwd">비밀번호<input type="password" class="inputJoin" th:field="*{password}" placeholder="비밀번호를 입력해주세요"></span>
+                    <span class="passwdCheck"><input type="password" class="inputJoin" th:field="*{password}" placeholder="비밀번호 확인해주세요"></span>
+                    <span class="userName">이름<input type="text" class="inputJoin" th:field="*{name}" placeholder="이름을 입력해주세요"></span>
+                    <span class="PhoneNumber">핸드폰 번호<input type="tel" id="tel" th:field="*{phone}" onkeyup="inputPhoneNumber(this)" class="inputJoin"  maxlength="13" title="전화번호가 올바르지 않습니다." placeholder="입력 예) 010-XXXX-XXXX"></span>
+              		<span class="email">이메일<input type="email" id="email" th:field="*{email}" class="inputJoin" size="30" required placeholder="입력 예) seulbinim@gmail.com"></span>
                     <span class="submitJoin"><input type="submit" class="inputSubmit" value="회원가입"/></span>
                    
                 </form>

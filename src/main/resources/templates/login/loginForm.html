@@ -17,14 +17,11 @@
             </div>
 
             <div class="loginBox">
-                <form name="loginform" method="POST">
-                    <span class="id"><input type="text" name="id" value="" class="inputLogin" placeholder="아이디를 입력해주세요"/></span>
-                    <span class="passwd"><input type="password" name="pw" value="" class="inputLogin" placeholder="비밀번호를 입력해주세요"></span>
+                <form name="loginform" method="POST" th:action th:object="${loginForm}">
+                    <span class="id"><input type="text" th:field="*{loginid}" class="inputLogin" placeholder="아이디를 입력해주세요"/></span>
+                    <span class="passwd"><input type="password" th:field="*{password}" class="inputLogin" placeholder="비밀번호를 입력해주세요"></span>
 
                     <span class="submitLogin"><input type="submit" class="inputSubmit" value="로그인"/></span>
-                    <label class="checkbox">
-                        <input type="checkbox" name="autoLogin" class="inputCheck" value="1"/><b>자동로그인</b>
-                    </label>
                 </form>
 
             <ul class="loginMenu">
