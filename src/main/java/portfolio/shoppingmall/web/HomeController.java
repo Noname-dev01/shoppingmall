@@ -25,9 +25,9 @@ public class HomeController {
         if (loginMember == null){
             return "index";
         }
+        //세션 유지되면 로그인으로 이동
         model.addAttribute("member",loginMember);
-
-        return "index"; //로그인 되어있는 홈화면 만들고 수정해야됨.
+        return "loginHome";
     }
 
 }

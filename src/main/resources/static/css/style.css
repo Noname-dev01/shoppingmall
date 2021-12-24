@@ -25,7 +25,9 @@ header::after {content: ""; display: block; clear: both;}
 
     .menu > ul li:hover .sub_menu{display: block;}
     .sub_menu {position: absolute;width: 80%; background: #fff; margin-left: 10%; padding: 5px 0; font-size: 15px; border-top: 1px solid black; display: none; z-index: 9;}
-        .sub_menu > li a {display: inline-block; width: 100%; padding: 15px 0;}        
+        .sub_menu > li a {display: inline-block; width: 100%; padding: 15px 0;}
+
+
 /*slider*/            
 #main_slide {position: relative; width: 80%; overflow: hidden;margin-left: 10%; margin-top: 20px;}
     .slide_img p{position: absolute; width: 100%;}

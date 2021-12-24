@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="loginHeaderFragment" class="loginHeader">
+  <!--header-->
+  <header>
+    <nav class="nav">
+      <ul>
+        <form th:action="@{/logout}" method="post">
+        <li><a href="/">홈</a></li>
+          <li th:text="|로그인: ${}|">로그인 사용자</li>
+          <li><input class="logout" onclick="location.href='index.html'"
+              style="cursor: pointer;border: none;background-color: white"
+                     type="submit" th:value="로그아웃"/></li>
+          <li><a href="#">고객센터</a></li>
+        <li><a href="#">대한민국</a></li>
+        </form>
+      </ul>
+    </nav>
+
+    <h1><a href="/"><img src="../images/crownsLogo.png" class="logo" alt="Hi-End Logo" title="Hi-End Logo"></a></h1>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="#">GUCCI</a>
+          <ul class="sub_menu">
+            <li><a href="#">OUTER</a></li>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">BOTTOM</a></li>
+            <li><a href="#">CAP</a></li>
+            <li><a href="#">BAG</a></li>
+            <li><a href="#">ACC</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">JUUN.J</a>
+          <ul class="sub_menu">
+            <li><a href="#">OUTER</a></li>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">BOTTOM</a></li>
+            <li><a href="#">CAP</a></li>
+            <li><a href="#">BAG</a></li>
+            <li><a href="#">ACC</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Supreme</a>
+          <ul class="sub_menu">
+            <li><a href="#">OUTER</a></li>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">BOTTOM</a></li>
+            <li><a href="#">CAP</a></li>
+            <li><a href="#">BAG</a></li>
+            <li><a href="#">ACC</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">STONE ISLAND</a>
+          <ul class="sub_menu">
+            <li><a href="sub/STONE_ISLAND_OUTER.html">OUTER</a></li>
+            <li><a href="#">TOP</a></li>
+            <li><a href="sub/STONE_ISLAND_BOTTOM.html">BOTTOM</a></li>
+            <li><a href="#">CAP</a></li>
+            <li><a href="#">BAG</a></li>
+            <li><a href="#">ACC</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">CHANEL</a>
+          <ul class="sub_menu">
+            <li><a href="#">OUTER</a></li>
+            <li><a href="#">TOP</a></li>
+            <li><a href="#">BOTTOM</a></li>
+            <li><a href="#">CAP</a></li>
+            <li><a href="#">BAG</a></li>
+            <li><a href="#">ACC</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">고객센터</a>
+          <ul class="sub_menu">
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">리뷰</a></li>
+            <li><a href="#">Q&amp;A</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--header 끝-->
+</div>
+
+</html>

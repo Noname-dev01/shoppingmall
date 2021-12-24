@@ -2,6 +2,7 @@ package portfolio.shoppingmall.web.login;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,13 +30,13 @@ public class LoginController {
     @PostMapping("/login")
     public String login(@Validated @ModelAttribute LoginForm form, BindingResult bindingResult,
                         @RequestParam(defaultValue = "/") String redirectURL,
-                        HttpServletRequest request){
+                        HttpServletRequest request, Model model){
 
         if (bindingResult.hasErrors()){
             return "login/loginForm";
         }
 
-        Member loginMember = loginService.login(form.getLoginid(), form.getPassword());
+        Member loginMember = loginService.login(form.getLoginId(), form.getPassword());
 
         if (loginMember == null){
             bindingResult.reject("loginFail","아이디 또는 비밀번호가 맞지 않습니다.");
@@ -44,6 +45,7 @@ public class LoginController {
 
         HttpSession session = request.getSession();
         session.setAttribute(SessionConst.LOGIN_MEMBER, loginMember);
+        model.addAttribute("member",loginMember);
 
         return "redirect:" + redirectURL;
     }

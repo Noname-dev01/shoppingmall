@@ -16,6 +16,8 @@ public class Member {
     @NotEmpty
     private String password;
     @NotEmpty
+    private String passwordCheck;
+    @NotEmpty
     private String Email;
     @NotEmpty
     private String Phone;

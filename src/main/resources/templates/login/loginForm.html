@@ -18,14 +18,14 @@
 
             <div class="loginBox">
                 <form name="loginform" method="POST" th:action th:object="${loginForm}">
-                    <span class="id"><input type="text" th:field="*{loginid}" class="inputLogin" placeholder="아이디를 입력해주세요"/></span>
-                    <span class="passwd"><input type="password" th:field="*{password}" class="inputLogin" placeholder="비밀번호를 입력해주세요"></span>
+                    <span class="id"><input type="text" id="loginId" th:field="*{loginId}" class="inputLogin" placeholder="아이디를 입력해주세요"/></span>
+                    <span class="passwd"><input type="password" id="password" th:field="*{password}" class="inputLogin" placeholder="비밀번호를 입력해주세요"></span>
 
                     <span class="submitLogin"><input type="submit" class="inputSubmit" value="로그인"/></span>
                 </form>
 
             <ul class="loginMenu">
-                <li class="join"><a href="../members/joinForm.html">회원가입</a></li>
+                <li class="join"><a href="/members/join">회원가입</a></li>
                 <li class="idSearch"><a href="#">아이디 찾기</a></li>
                 <li class="pwSearch"><a href="#">비밀번호 찾기</a></li>
             </ul>    
