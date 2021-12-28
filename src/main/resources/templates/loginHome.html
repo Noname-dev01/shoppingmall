@@ -21,12 +21,11 @@
                 <form th:action="@{/logout}" method="post">
                     <li><a href="/">홈</a></li>
                     <li th:text="|${member.name}님|">로그인 사용자</li>
-                    <li><a href="#">마이페이지</a></li>
-                    <li><input class="logout" onclick="location.href='index.html'"
+                    <li><input class="logout"  onclick="alert('로그아웃 되었습니다.'),location.href='index.html'"
                                style="cursor: pointer;border: none;background-color: white"
                                type="submit" th:value="로그아웃"/></li>
-                    <li><a href="#">고객센터</a></li>
-                    <li><a href="#">대한민국</a></li>
+                    <li><a href="#">마이페이지</a></li>
+                    <li><a href="/customerService">고객센터</a></li>
                 </form>
             </ul>
         </nav>

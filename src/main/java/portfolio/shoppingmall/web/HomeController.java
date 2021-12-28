@@ -30,4 +30,16 @@ public class HomeController {
         return "loginHome";
     }
 
+    @GetMapping("/customerService")
+    public String customerService(@SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false)
+                                              Member loginMember, Model model) {
+
+        if (loginMember == null){
+            return "service/customerService";
+        }
+        model.addAttribute("member",loginMember);
+
+        return "service/loginCustomerService";
+    }
+
 }
